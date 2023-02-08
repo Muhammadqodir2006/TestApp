@@ -1,45 +1,44 @@
 package uz.itschool.testapp
 
-var baza = {
-    Test("  1  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  2  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  3  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  4  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  5  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  6  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  7  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  8  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  9  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  10  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  11  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  12  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  13  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  14  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  15  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  16  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  17  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  18  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  19  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  20  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  21  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  22  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  23  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  24 To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  25  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  26  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  27  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  28  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  29  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  20  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  30  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  31  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  32  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  33  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  34  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  35  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  36  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  37  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  38  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  39  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-    Test("  40  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), 0)
-}
+var baza = arrayListOf(
+    Test("  1  To'gri javobni toping hgfhgfghf g hgf hgf hgf hgf hgf h ghfhgfgh hgfhg fhg fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb .", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  2  To'gri javobni toping hgfhgfghf g hgf hgf hgf hgf hgf h ghfhgfgh hgfhg fhg fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  3  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  4  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  5  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  6  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb", "noto'gri"), "to'gri"),
+    Test("  7  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  8  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb"), "to'gri"),
+    Test("  9  To'gri javobni topinghgfhgfghf g hgf hgf hgf hgf hgf h ghfhgfgh hgfhg fhg fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  10  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  11  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  12  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  13  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  14  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  15  To'gri javobni toping hgfhgfghf g hgf hgf hgf hgf hgf h ghfhgfgh hgfhg fhg fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  16  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  17  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  18  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  19  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb"), "to'gri"),
+    Test("  20  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  21  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb"), "to'gri"),
+    Test("  22  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb"), "to'gri"),
+    Test("  23  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  24 To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"),  "to'gri"),
+    Test("  25  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  26  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb"), "to'gri"),
+    Test("  27  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  28  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  29  To'gri javobni toping hgfhgfghf g hgf hgf hgf hgf hgf h ghfhgfgh hgfhg fhg fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  30  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  31  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  32  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  33  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  34  To'gri javobni toping hgfhgfghf g hgf hgf hgf hgf hgf h ghfhgfgh hgfhg fhg fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  35  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  36  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  37  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb"), "to'gri"),
+    Test("  38  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+    Test("  39  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "fhgf hgf hgf hgf hgf hg fhg fhgfghfhgfhgfhg hgf ghfhgf hgfhgfhgf hgf hgjknbmb", "noto'gri"), "to'gri"),
+    Test("  40  To'gri javobni toping.", arrayOf("to'gri", "noto'gri", "noto'gri", "noto'gri"), "to'gri"),
+)

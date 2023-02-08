@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TestApp</string>
     <string name="question_here">Question here</string>
+    <string name="var1">var1</string>
+    <string name="previous">previous</string>
+    <string name="next">Next</string>
 </resources>
