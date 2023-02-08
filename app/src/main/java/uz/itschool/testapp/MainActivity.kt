@@ -1,22 +1,25 @@
 package uz.itschool.testapp
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
+import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val testCount = 15
+    private val testCount = 5
     private lateinit var tests: ArrayList<Question>
     private lateinit var questionTextView: TextView
     private lateinit var variants: LinearLayout
-    private var userAnswer = ""
+    private fun userAnswer(): Int {return currentQuestion().userAnswer}
     private var currentQuestionIndex = 0
-    private var userAnswers = ArrayList<String>()
+    private fun currentQuestion (): Question {return tests[currentQuestionIndex]}
 
 
 
@@ -24,9 +27,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        for (i in 1..testCount){
-            userAnswers.add("")
-        }
 
         //
 
@@ -34,55 +34,72 @@ class MainActivity : AppCompatActivity() {
 
         //
 
+
         questionTextView = findViewById(R.id.questionText)
         variants = findViewById(R.id.variants)
         tests = getTests()
+        initGrid()
         previous.isEnabled = currentQuestionIndex >0
         next.isEnabled = currentQuestionIndex < testCount-1
         varupdate()
-        questupdate(0)
-        Log.d("TAG", userAnswers.size.toString())
+        questupdate()
 
         var0Card.setOnClickListener{
-            userAnswer = var0.text.toString()
+            tests[currentQuestionIndex].userAnswer = if (tests[currentQuestionIndex].userAnswer == 0) -1 else 0
             varupdate()
+            checkForEnd()
         }
         var1Card.setOnClickListener{
-            userAnswer = var1.text.toString()
+            tests[currentQuestionIndex].userAnswer = if (tests[currentQuestionIndex].userAnswer == 1) -1 else 1
             varupdate()
+            checkForEnd()
         }
         var2Card.setOnClickListener{
-            userAnswer = var2.text.toString()
+            tests[currentQuestionIndex].userAnswer =if (tests[currentQuestionIndex].userAnswer == 2) -1  else 2
             varupdate()
+            checkForEnd()
         }
         var3Card.setOnClickListener{
-            userAnswer = var3.text.toString()
+            tests[currentQuestionIndex].userAnswer = if (tests[currentQuestionIndex].userAnswer == 3) -1 else 3
             varupdate()
+            checkForEnd()
         }
         previous.setOnClickListener {
             currentQuestionIndex--
-            questupdate(-1)
+            questupdate()
         }
         next.setOnClickListener {
             currentQuestionIndex++
-            questupdate(1)
+            questupdate()
+        }
+        restart.setOnClickListener {
+            reset()
         }
 
     }
-    private fun questupdate(c:Int){
-        if (userAnswer != "") {
-            if (c == 1) userAnswers[currentQuestionIndex-1] = userAnswer
-            if (c == -1) userAnswers[currentQuestionIndex+1] = userAnswer
-        }
-        userAnswer = ""
-        val question = tests[currentQuestionIndex]
 
-        questionTextView.text = question.test.question
+    private fun reset() {
+        endView.visibility = View.GONE
+        game.alpha = 1f
+        currentQuestionIndex = 0
+        tests = getTests()
+        initGrid()
+        previous.isEnabled = currentQuestionIndex >0
+        next.isEnabled = currentQuestionIndex < testCount-1
+        varupdate()
+        questupdate()
 
-        var0.text = question.test.vars[0]
-        var1.text = question.test.vars[1]
-        var2.text = question.test.vars[2]
-        var3.text = question.test.vars[3]
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun questupdate(){
+        order.text = "${currentQuestionIndex+1}/${testCount }"
+        questionTextView.text = currentQuestion().test.question
+
+        var0.text = currentQuestion().test.vars[0]
+        var1.text = currentQuestion().test.vars[1]
+        var2.text = currentQuestion().test.vars[2]
+        var3.text = currentQuestion().test.vars[3]
 
         previous.isEnabled = currentQuestionIndex >0
         next.isEnabled = currentQuestionIndex < testCount-1
@@ -92,37 +109,25 @@ class MainActivity : AppCompatActivity() {
     private fun varupdate() {
 
 
-        if (userAnswer == var0.text) var0Card.setBackgroundColor(Color.BLUE) else var0Card.setBackgroundColor(
+        if (userAnswer() == 0) var0Card.setBackgroundColor(Color.rgb(82,66,207)) else var0Card.setBackgroundColor(
             Color.rgb(225, 225, 225)
         )
-        if (userAnswer == var1.text) var1Card.setBackgroundColor(Color.BLUE) else var1Card.setBackgroundColor(
+        if (userAnswer() == 1) var1Card.setBackgroundColor(Color.rgb(82,66,207)) else var1Card.setBackgroundColor(
             Color.rgb(225, 225, 225)
         )
-        if (userAnswer == var2.text) var2Card.setBackgroundColor(Color.BLUE) else var2Card.setBackgroundColor(
+        if (userAnswer() == 2) var2Card.setBackgroundColor(Color.rgb(82,66,207)) else var2Card.setBackgroundColor(
             Color.rgb(225, 225, 225)
         )
-        if (userAnswer == var3.text) var3Card.setBackgroundColor(Color.BLUE) else var3Card.setBackgroundColor(
+        if (userAnswer() == 3) var3Card.setBackgroundColor(Color.rgb(82,66,207)) else var3Card.setBackgroundColor(
             Color.rgb(225, 225, 225)
         )
 
-        if (userAnswer == var0.text) var0.setTextColor(Color.WHITE) else var0.setTextColor(Color.BLACK)
-        if (userAnswer == var1.text) var1.setTextColor(Color.WHITE) else var1.setTextColor(Color.BLACK)
-        if (userAnswer == var2.text) var2.setTextColor(Color.WHITE) else var2.setTextColor(Color.BLACK)
-        if (userAnswer == var3.text) var3.setTextColor(Color.WHITE) else var3.setTextColor(Color.BLACK)
+        if (userAnswer() == 0) var0.setTextColor(Color.WHITE) else var0.setTextColor(Color.BLACK)
+        if (userAnswer() == 1) var1.setTextColor(Color.WHITE) else var1.setTextColor(Color.BLACK)
+        if (userAnswer() == 2) var2.setTextColor(Color.WHITE) else var2.setTextColor(Color.BLACK)
+        if (userAnswer() == 3) var3.setTextColor(Color.WHITE) else var3.setTextColor(Color.BLACK)
 
-
-//        for (i in question.test.vars){
-//            val varCardView = CardView(this)
-//            varCardView.marginTop
-//            val text = TextView(applicationContext)
-//            text.text = i
-//            text.gravity = TextView.TEXT_ALIGNMENT_GRAVITY
-//
-//
-//
-//            varCardView.addView(text)
-//            variants.addView(varCardView)
-//        }
+        initGrid()
 
     }
 
@@ -146,10 +151,48 @@ class MainActivity : AppCompatActivity() {
             val a = baza[randomNum]
             val vars = a.vars
             vars.shuffle()
-            var test = Test(a.question, vars, a.correctAnswer)
-            array.add(Question(baza[randomNum]))
+            val test = Test(a.question, vars, a.correctAnswer)
+            array.add(Question(test))
 
         }
         return array
     }
+    private fun initGrid(){
+        numbersgrid.removeAllViews()
+        for (i in 1 .. testCount){
+            val btn = Button(applicationContext)
+            if (tests[i-1].userAnswer != -1) {
+                btn.setBackgroundColor(Color.TRANSPARENT)
+                btn.setTextColor(Color.WHITE)
+            }
+            btn.setOnClickListener{
+                currentQuestionIndex = i-1
+                questupdate()
+            }
+            btn.text = i.toString()
+            numbersgrid.addView(btn)
+        }
+
+    }
+    @SuppressLint("SetTextI18n")
+    private fun checkForEnd() {
+        for (i in tests){
+            if (i.userAnswer == -1) return
+        }
+        val score = calculate()
+        scoreView.text = "$score/$testCount"
+        endView.visibility = View.VISIBLE
+        game.alpha = 0.65f
+
+
+    }
+
+    private fun calculate(): Int {
+        var a = 0
+        for (i in tests){
+            if (i.test.correctAnswer == i.test.vars[i.userAnswer]) a++
+        }
+        return a
+    }
+
 }
