@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun reset() {
+        game.isEnabled = true
         endView.visibility = View.GONE
         game.alpha = 1f
         currentQuestionIndex = 0
@@ -183,6 +184,7 @@ class MainActivity : AppCompatActivity() {
         scoreView.text = "$score/$testCount"
         endView.visibility = View.VISIBLE
         game.alpha = 0.65f
+        game.isEnabled = false
 
 
     }
